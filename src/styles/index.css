@@ -1,5 +1,55 @@
+.hidden {
+  display: none;
+}
+
 .menu {
-  background-color: darkorchid;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 62px;
+  background-color: rgb(50, 160, 204);
+}
+.menu > i {
+  font-size: 16px;
+  color: aquamarine;
+}
+.menu > nav {
+  position: absolute;
+  top: 62px;
+  right: 0;
+  width: 310px;
+  background: rgb(205, 112, 112);
+}
+
+@media only screen and (min-width: 668px) {
+  .menu {
+    flex-direction: column;
+  }
+  .menu > i {
+    display: none;
+  }
+  .menu > nav {
+    position: initial;
+    display: flex;
+  }
+  .menu > nav > ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  max-width: 1500px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

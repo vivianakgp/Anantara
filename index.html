@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/index.css">
+    <script type="module" defer src="./src/index.js"></script>
+    <script src="https://kit.fontawesome.com/d69f8c2d2d.js" crossorigin="anonymous"></script>
     <title>Anantara BodySpa</title>
+    
 </head>
 <body>
     <header>
         <div class="menu">
             <!-- logo -->
             <p>logo</p>
-            <p>burger</p>
-            <nav>
+            <i id="menuIcon" class="fa-solid fa-bars"></i>
+            <!-- <i class="fa-solid fa-xmark"></i> -->
+            <nav class="hidden" id="menuNav">
                 <ul>
-                    <li><a href="">Nosotros</a></li>
-                    <li>
-                        <a href="">Tratamientos</a><span>icon</span>
+                    <li class="menuItem"><a href="">Nosotros</a></li>
+                    <li class="menuItem">
+                        <a href="">Tratamientos</a><span id="menu__treatments"> * </span>
                         <!-- tratamientos sub-menu -->
-                        <ul class="treatments">
+                        <ul class="treatmentsSubMenu hidden" id="treatments__subMenu">
                             <li>
-                                <a href="">Faciales</a>
-                                <!-- faciales sun-menu -->
-                                <ul>
+                                <a href="">Faciales</a><span id="facials__subMenu">*</span>
+                                <!-- faciales sub-menu -->
+                                <ul class="treatmentsSubMenuItems hidden" id="facialsList">
                                     <li><a href="">Limpieza facial</a></li>
                                     <li><a href="">Hidrafacial</a></li>
                                     <li><a href="">Microneedling</a></li>
@@ -32,9 +36,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="">Tratamientos Corporales</a>
+                                <a href="">Tratamientos Corporales</a><span id="bodyTreatments__subMenu">*</span>
                                 <!-- corporales sun-menu -->
-                                <ul>
+                                <ul class="treatmentsSubMenuItems hidden" id="bodyTreatmentsList">
                                     <li><a href="">Em Sculp</a></li>
                                     <li><a href="">Body perfectum</a></li>
                                     <li><a href="">Anticell free</a></li>
@@ -46,16 +50,16 @@
         
                             </li>
                             <li>
-                                <a href="">Tratamiento Regenerante</a>
+                                <a href="">Tratamiento Regenerante</a><span id="regenerativeTreatment__subMenu">*</span>
                                 <!-- Regenerante sun-menu -->
-                                <ul>
+                                <ul class="treatmentsSubMenuItems hidden" id="regenerativeTreatmentList">
                                     <li><a href="">Micropuntura en estrias</a></li>
                                     <li><a href="">Micropuntura en secuelas de acné</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="">Contacto</a></li>
+                    <li class="menuItem"><a href="">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -64,6 +68,7 @@
     <main>
         <section class="about">
             <h2>¿Quíenes somos?</h2>
+
 
         </section>
         <section class="services">

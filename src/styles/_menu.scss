@@ -1,0 +1,42 @@
+.hidden{
+    display: none;
+}
+// menu 
+.menu{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 62px;
+    background-color: rgb(50, 160, 204);
+    >i{
+        font-size: 16px;
+        color: aquamarine;
+    }
+    >nav{
+        position: absolute;
+        top: 62px;
+        right: 0;
+        width: 310px;
+        background: rgb(205, 112, 112);
+    }
+}
+// medias
+@media only screen and(min-width:668px){
+    .menu{
+        flex-direction: column;
+        >i{
+            display: none;
+        }
+        >nav{
+            position: initial;
+            display: flex;
+            >ul{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+}

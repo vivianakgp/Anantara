@@ -1,7 +1,16 @@
-// header -menu/banner styles
-// footer styles
+// header -menu/banner, footer, global, menu styles
+@use "./menu";
+
+
 // global styles
-// menu 
-.menu{
-    background-color: darkorchid;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 320px;
+    max-width: 1500px;
+    margin: auto;
 }
