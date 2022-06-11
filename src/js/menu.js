@@ -17,8 +17,15 @@ const regenerativeTreatmentList = document.getElementById(
 const menuIcon = document.getElementById("menuIcon");
 // nav
 const menuNav = document.getElementById("menuNav");
+// subMenu icons
+const treatmentIcon = document.getElementById("treatmentIcon");
+const facialIcon = document.getElementById("facialIcon");
+const bodyTreatmentsIcon = document.getElementById("bodyTreatmentsIcon");
+const regenerativeTreatmentIcon = document.getElementById(
+  "regenerativeTreatmentIcon"
+);
 
-// toggle subMenu open/close
+// toggle subMenu hidden/ show ul
 const toggleMenu = (element) => {
   if (element.classList.contains("hidden")) {
     element.classList.remove("hidden");
@@ -26,7 +33,7 @@ const toggleMenu = (element) => {
     element.classList.add("hidden");
   }
 };
-// toggle menu icon open/close
+// toggle menuIcon burger/close
 const toggleMenuIcon = () => {
   if (menuIcon.classList.contains("fa-bars")) {
     menuIcon.classList.remove("fa-bars");
@@ -36,28 +43,44 @@ const toggleMenuIcon = () => {
     menuIcon.classList.add("fa-bars");
   }
 };
-
-export const openCloseMenu = () => {
+// toggle open/close nav
+export const openCloseMenuNav = () => {
   menuIcon.addEventListener("click", () => {
     toggleMenuIcon();
     toggleMenu(menuNav);
   });
 };
-export const addEventsListener = (element, submenuList) => {
-  element.addEventListener("click", () => toggleMenu(submenuList));
+// toggle arrowUpIcon subMenus
+const togglearrowUpIcon = (icon) => {
+  if (icon.classList.contains("fa-angle-down")) {
+    icon.classList.remove("fa-angle-down");
+    icon.classList.add("fa-angle-up");
+  } else {
+    icon.classList.remove("fa-angle-up");
+    icon.classList.add("fa-angle-down");
+  }
 };
+//add event click to treatments category on menu
+menu__treatments.addEventListener("click", () => {
+  toggleMenu(treatments__subMenu);
+  togglearrowUpIcon(treatmentIcon);
+});
+//add click to faciial submenu
+facials__subMenu.addEventListener("click", () => {
+  toggleMenu(facialsList);
+  togglearrowUpIcon(facialIcon);
+});
+//add click to body Treatments submenu
+bodyTreatments__subMenu.addEventListener("click", () => {
+  toggleMenu(bodyTreatmentsList);
+  togglearrowUpIcon(bodyTreatmentsIcon);
+});
+//add click to regenerative Treatment submenu
+regenerativeTreatment__subMenu.addEventListener("click", () => {
+  toggleMenu(regenerativeTreatmentList);
+  togglearrowUpIcon(regenerativeTreatmentIcon);
+});
 
-// add event click to treatments category on menu
-// menu__treatments.addEventListener("click", () =>
-//   toggleMenu(treatments__subMenu)
-// );
-// add click to faciial submenu
-// facials__subMenu.addEventListener("click", () => toggleMenu(facialsList));
-// add click to body Treatments submenu
-// bodyTreatments__subMenu.addEventListener("click", () =>
-//   toggleMenu(bodyTreatmentsList)
-// );
-// add click to regenerative Treatment submenu
-// regenerativeTreatment__subMenu.addEventListener("click", () =>
-//   toggleMenu(regenerativeTreatmentList)
-// );
+// export const addEventsListener = (element, submenuList) => {
+//   element.addEventListener("click", () => toggleMenu(submenuList));
+// };

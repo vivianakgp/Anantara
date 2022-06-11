@@ -1,3 +1,19 @@
+.menu > nav > ul > li.treamentsMenu > ul > li > ul.treatmentsSubMenuItems > li > a, .menu > nav > ul > li.treamentsMenu > ul > li > a, .menu > nav > ul > li > a {
+  color: rgb(77, 77, 77);
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.menu > nav > ul > li.treamentsMenu > ul > li > ul.treatmentsSubMenuItems > li, .menu > nav > ul > li.treamentsMenu > ul > li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.menu > nav > ul > li.treamentsMenu > ul > li > span > i, .menu > nav > ul > li > span > i {
+  font-size: 16px;
+  color: rgb(144, 185, 228);
+}
+
 .hidden {
   display: none;
 }
@@ -10,18 +26,50 @@
   align-items: center;
   padding: 0 24px;
   height: 62px;
-  background-color: rgb(50, 160, 204);
+  border: 1px solid rgb(77, 77, 77);
+}
+.menu > img {
+  width: 150px;
 }
 .menu > i {
-  font-size: 16px;
-  color: aquamarine;
+  font-size: 24px;
+  color: rgb(77, 77, 77);
 }
 .menu > nav {
   position: absolute;
   top: 62px;
   right: 0;
-  width: 310px;
-  background: rgb(205, 112, 112);
+  width: 320px;
+  min-height: 100vh;
+  padding: 54px 24px;
+  font-size: 18px;
+  background: rgb(233, 233, 233);
+}
+.menu > nav > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu > nav > ul > li {
+  list-style: none;
+  margin-bottom: 24px;
+  width: 100%;
+  text-align: start;
+}
+.menu > nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+.menu > nav > ul > li.treamentsMenu > ul {
+  padding: 12px 0 0 12px;
+}
+.menu > nav > ul > li.treamentsMenu > ul > li > a:hover {
+  text-decoration: underline;
+}
+.menu > nav > ul > li.treamentsMenu > ul > li > ul.treatmentsSubMenuItems {
+  padding: 12px 0 0 12px;
+}
+.menu > nav > ul > li.treamentsMenu > ul > li > ul.treatmentsSubMenuItems > li > a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 668px) {

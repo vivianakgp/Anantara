@@ -1,3 +1,17 @@
+$test: rgb(77, 77, 77);
+%shared-anchor{
+    color: $test;
+    text-decoration: none;
+    margin-right: 5px;
+}
+%shared-treatmentsSubMenuList{
+    list-style: none;
+    margin-bottom: 8px;
+}
+%shared-icons{
+    font-size: 16px;
+    color: rgb(144, 185, 228);
+}
 .hidden{
     display: none;
 }
@@ -10,23 +24,95 @@
     align-items: center;
     padding: 0 24px;
     height: 62px;
-    background-color: rgb(50, 160, 204);
+    border: 1px solid $test;
+    >img{
+        width: 150px;
+    }
     >i{
-        font-size: 16px;
-        color: aquamarine;
+        font-size: 24px;
+        color: $test;
     }
     >nav{
         position: absolute;
         top: 62px;
         right: 0;
-        width: 310px;
-        background: rgb(205, 112, 112);
+        width: 320px;
+        min-height: 100vh;
+        padding: 54px 24px;
+        font-size: 18px;
+        background: rgb(233, 233, 233);
+        >ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            >li{
+                list-style: none;
+                margin-bottom: 24px;
+                width: 100%;
+                text-align: start;
+                //background-color: aquamarine;
+                >a{
+                    @extend %shared-anchor;
+                }
+                >a:hover{
+                    text-decoration: underline;
+                }
+                >span{
+                    >i{
+                    @extend %shared-icons;
+                    }
+                }
+            }
+            // treatments sub menu
+            >li.treamentsMenu{
+                >ul{
+                    padding: 12px 0 0 12px;
+                    //background-color: aliceblue;
+                >li{
+                    @extend %shared-treatmentsSubMenuList;
+
+                    >a{
+                        @extend %shared-anchor;
+                    }
+                    >a:hover{
+                        text-decoration: underline;
+                    }
+                    >span{
+                        >i{
+                            @extend %shared-icons;
+                        }
+                    }
+                    // treatmentMenu - suMenus
+                    >ul.treatmentsSubMenuItems{
+                        padding: 12px 0 0 12px;
+                        //background-color: rgb(165, 229, 250);
+                        >li{
+                            @extend %shared-treatmentsSubMenuList;
+                            >a{
+                                @extend %shared-anchor;
+                            }
+                            >a:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                }
+
+            }
+        }
     }
+
 }
+
 // medias
 @media only screen and(min-width:668px){
     .menu{
         flex-direction: column;
+        >img{
+            // width: 150px;
+        }
         >i{
             display: none;
         }

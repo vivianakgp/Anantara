@@ -14,18 +14,21 @@
     <header>
         <div class="menu">
             <!-- logo -->
-            <p>logo</p>
+            <img src="./src/assets/LOGOTIPO _BLUE.png">
             <i id="menuIcon" class="fa-solid fa-bars"></i>
-            <!-- <i class="fa-solid fa-xmark"></i> -->
-            <nav class="hidden" id="menuNav">
+            <!-- <i class="fa-solid fa-xmark"></i> class="hidden"-->
+            <nav id="menuNav">
                 <ul>
-                    <li class="menuItem"><a href="">Nosotros</a></li>
-                    <li class="menuItem">
-                        <a href="">Tratamientos</a><span id="menu__treatments"> * </span>
+                    <li><a href="">Nosotros</a></li>
+                    <li class="treamentsMenu">
+                        <a href="">Tratamientos</a>
+                        <!-- <i class="fa-solid fa-angle-up"></i> -->
+                        <span id="menu__treatments"><i class="fa-solid fa-angle-down" id="treatmentIcon"></i></span>
                         <!-- tratamientos sub-menu -->
                         <ul class="treatmentsSubMenu hidden" id="treatments__subMenu">
                             <li>
-                                <a href="">Faciales</a><span id="facials__subMenu">*</span>
+                                <a href="">Faciales</a>
+                                <span id="facials__subMenu"><i class="fa-solid fa-angle-down" id="facialIcon"></i></span>
                                 <!-- faciales sub-menu -->
                                 <ul class="treatmentsSubMenuItems hidden" id="facialsList">
                                     <li><a href="">Limpieza facial</a></li>
@@ -36,7 +39,8 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="">Tratamientos Corporales</a><span id="bodyTreatments__subMenu">*</span>
+                                <a href="">Tratamientos Corporales</a>
+                                <span id="bodyTreatments__subMenu"><i class="fa-solid fa-angle-down" id="bodyTreatmentsIcon"></i></span>
                                 <!-- corporales sun-menu -->
                                 <ul class="treatmentsSubMenuItems hidden" id="bodyTreatmentsList">
                                     <li><a href="">Em Sculp</a></li>
@@ -50,7 +54,8 @@
         
                             </li>
                             <li>
-                                <a href="">Tratamiento Regenerante</a><span id="regenerativeTreatment__subMenu">*</span>
+                                <a href="">Tratamiento Regenerante</a>
+                                <span id="regenerativeTreatment__subMenu"><i class="fa-solid fa-angle-down" id="regenerativeTreatmentIcon"></i></span>
                                 <!-- Regenerante sun-menu -->
                                 <ul class="treatmentsSubMenuItems hidden" id="regenerativeTreatmentList">
                                     <li><a href="">Micropuntura en estrias</a></li>
@@ -59,7 +64,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menuItem"><a href="">Contacto</a></li>
+                    <li><a href="">Contacto</a></li>
                 </ul>
             </nav>
         </div>
