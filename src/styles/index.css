@@ -32,7 +32,7 @@
 }
 .menu > i {
   font-size: 24px;
-  color: rgb(77, 77, 77);
+  color: rgb(148, 198, 118);
 }
 .menu > nav {
   position: absolute;
@@ -97,6 +97,35 @@
     margin: 0 24px;
   }
 }
+.about {
+  text-align: center;
+}
+.about > h3 {
+  color: rgb(93, 93, 93);
+  font-size: 17px;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  margin: 8px;
+}
+.about .adjectives {
+  margin: 50px 0;
+}
+.about .adjectives > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 20px 0;
+  padding: 60px 38px;
+  border: 1px solid rgb(93, 93, 93);
+}
+.about .adjectives > article > i {
+  font-size: 42px;
+}
+.about .adjectives > article > h4 {
+  margin: 10px 0 30px 0;
+}
 * {
   padding: 0;
   margin: 0;
@@ -107,7 +136,23 @@ body {
   min-width: 320px;
   max-width: 1500px;
   margin: auto;
-  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(93, 93, 93);
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  font-size: 17px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: rgb(128, 200, 200);
+}
+
+main {
+  padding: 24px;
 }
 
 header .banner {
@@ -141,7 +186,7 @@ header .banner .coverImg > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(1, 1, 1, 0.675);
+  background-color: rgba(147, 198, 118, 0.476);
 }
 header .banner .coverImg > div > h1 {
   display: none;
@@ -154,6 +199,13 @@ header .banner .waveBotton {
   width: 100%;
 }
 
+@media only screen and (min-width: 668px) {
+  main {
+    padding: 0;
+    max-width: 85%;
+    margin: auto;
+  }
+}
 @media only screen and (min-width: 800px) {
   header .banner {
     height: 300px;
