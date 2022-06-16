@@ -123,9 +123,9 @@ header .banner .waveTop {
 }
 header .banner .coverImg {
   position: relative;
-  background-image: url("../assets/mobile/cover-cell.jpeg");
+  background-image: url("../assets/desktop/cover.jpeg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right top;
   background-size: cover;
   background-attachment: fixed;
   background-color: aliceblue;
@@ -141,9 +141,10 @@ header .banner .coverImg > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(134, 211, 19, 0.511);
+  background-color: rgba(1, 1, 1, 0.675);
 }
 header .banner .coverImg > div > h1 {
+  display: none;
   color: white;
   letter-spacing: 3px;
 }
@@ -156,9 +157,6 @@ header .banner .waveBotton {
 @media only screen and (min-width: 800px) {
   header .banner {
     height: 300px;
-  }
-  header .banner .coverImg {
-    background-image: url("../assets/desktop/cover.jpeg");
   }
 }
 
