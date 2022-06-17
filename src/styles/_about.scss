@@ -3,14 +3,16 @@ $icon-border:rgba(187, 168, 121, 1);
 
 .about{
     text-align: center;
-    // border: 1px solid black;
+    // border: 1px solid rgb(216, 86, 86);
     >h3{
+        width: 80%;
+        margin: 8px auto;
         color: rgba(93, 93, 93, 1);
         font-size: 17px;
         font-weight: 200;
         letter-spacing: .5px;
         line-height: 30px;
-        margin: 8px ;
+        // background-color: blanchedalmond;
     }
     .adjectives{
         display: flex;
@@ -37,7 +39,28 @@ $icon-border:rgba(187, 168, 121, 1);
             }
         }
     }
-    .ourMission{
-        background-color: rgb(208, 252, 182);
+    .mission{
+        position: relative;
+        padding: 60px 0;
+        background-color: rgba(238, 238, 238, 0.628);
+
+        .content{
+            width: 80%;
+            margin: 8px auto;
+            >h2{
+                margin-bottom: 25px;
+            }
+        }
+        .waveDecoration{
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            
+        
+            transform: rotate(180deg);
+        }
+        
     }
+  
 }

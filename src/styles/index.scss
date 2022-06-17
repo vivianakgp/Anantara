@@ -1,6 +1,8 @@
 // header -menu/banner, footer, global, menu styles
 @use "./menu";
 @use "./about";
+@use "./treatments";
+
 $font-color:rgba(93, 93, 93, 1);
 // rgba(93, 93, 93, 1)
 // color: rgba(187, 168, 121, 1);
@@ -39,8 +41,10 @@ h1, h2, h3, h4 {
 }
 
 main{
-    padding: 24px;
-    // background-color: beige;
+    >section{
+        // border-bottom: 1px solid rgb(95, 94, 94);
+        // margin-bottom: 50px;
+    }
 }
 
 // header styles
@@ -96,11 +100,7 @@ header{
 
 // medias
 @media only screen and(min-width:668px){
-   main{
-       padding: 0;
-       max-width: 85%;
-       margin: auto;
-   }
+
 
 }
 
