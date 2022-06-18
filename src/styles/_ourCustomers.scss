@@ -1,0 +1,26 @@
+.ourCustomers{
+    padding: 60px 0;
+    border: 1px solid saddlebrown;
+    >h2{
+        text-align: center;
+        margin: 30px 15px 60px 15px;
+    }
+    .carousel{
+        min-height: 300px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        text-align: center;
+        color: rgb(109, 108, 108);
+        background-color: rgba(238, 238, 238, 0.628);
+
+        .carousel-inner{
+            // height: 100%;
+            .carousel-item{
+                padding: 15%;
+                >span{
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
